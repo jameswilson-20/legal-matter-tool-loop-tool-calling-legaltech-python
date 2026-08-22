@@ -18,7 +18,7 @@ python -m pip install -r requirements.txt
 pytest -q
 ```
 
-The focused test starts from a matter whose documents were delivered. It asserts that scheduling `2026-08-20` changes the status, preserves the exact date, and writes an audit record. That is the business decision at the boundary, rather than a check that a function merely exists.
+The focused test starts from a matter whose documents were delivered. It asserts that scheduling `2026-08-20` changes the status, preserves the exact date, and writes an audit record. That is the business decision at the boundary, not a check that a function merely exists.
 
 ## Serve typed requests
 
@@ -52,7 +52,7 @@ MIT
 
 ## Setting up for real use: Legal Matter Tool Loop Tool Calling Legaltech Python
 
-The code stays simple on purpose — here's what to set up before going live: The details below apply to Legal Matter Tool Loop Tool Calling Legaltech Python.
+The code stays simple on purpose. Here's what to set up before going live. The details below apply to Legal Matter Tool Loop Tool Calling Legaltech Python.
 
 **Account & key**
 
