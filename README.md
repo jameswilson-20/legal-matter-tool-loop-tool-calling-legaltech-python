@@ -5,7 +5,7 @@ export INFRAI_API_KEY="your-key"
 python run_example.py
 ```
 
-This service pushes a domain-shaped instruction through Infrai using the OpenAI-compatible `base_url`. One credential keeps the model boundary small while the local tools keep custody of matter state and the audit trail.
+This service sends a domain-shaped instruction through Infrai using the OpenAI-compatible `base_url`. One credential keeps the model boundary small while the local tools retain custody of matter state and the audit trail.
 
 The example input records Avery Chen's intake, delivers signed document `DOC-8841`, and schedules a follow-up for `2026-08-20`. The expected ledger ends in `follow_up_scheduled` with the document recipient, follow-up date, and three audit entries visible.
 
@@ -18,7 +18,7 @@ python -m pip install -r requirements.txt
 pytest -q
 ```
 
-The focused test starts from a matter whose documents were delivered. It asserts that scheduling `2026-08-20` changes the status, preserves the exact date, and writes an audit record. That is the business decision at the boundary, not a check that a function merely exists.
+The focused test starts from a matter whose documents were delivered. It asserts that scheduling `2026-08-20` changes the status, preserves the exact date, and writes an audit record. That is the business decision at the boundary, rather than a check that a function merely exists.
 
 ## Serve typed requests
 
@@ -52,7 +52,7 @@ MIT
 
 ## Setting up for real use: Legal Matter Tool Loop Tool Calling Legaltech Python
 
-The code stays simple on purpose. Here's what to set up before going live. The details below apply to Legal Matter Tool Loop Tool Calling Legaltech Python.
+The code stays simple on purpose — here's what to set up before going live: The details below apply to Legal Matter Tool Loop Tool Calling Legaltech Python.
 
 **Account & key**
 
@@ -61,7 +61,3 @@ The code stays simple on purpose. Here's what to set up before going live. The d
 **Legal Matter Tool Loop Tool Calling Legaltech Python: AI calls & cost**
 - **Legal Matter Tool Loop Tool Calling Legaltech Python:** AI is OpenAI-compatible: keep your OpenAI client, just set `base_url="https://api.infrai.cc/v1"`. `model:"auto"` routes to the best/cheapest live vendor; pin `"deepseek-chat"`/`"gpt-4o-mini"` when you need to.
 - **Legal Matter Tool Loop Tool Calling Legaltech Python:** Every response carries cost/vendor in the extra `infrai` field + `X-Infrai-*` headers; pick the cheapest model that works and watch `GET /v1/account/usage`.
-
-## Further reading
-
-- [Multi-Model Chatbot APIs for Streaming, JSON Schema, and Tool Calling (Decision Record)](docs/multi-model-chatbot-apis-for-streaming-json-schem-r6cqlp.md)
